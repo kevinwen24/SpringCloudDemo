@@ -1,0 +1,17 @@
+<html>
+    <head>
+        <title>Hello Linkedin</title>
+    </head>
+    <body>
+        <h3>Connect to Linkedin</h3>
+
+        <form action="/connect/linkedin" method="POST">
+            <input type="hidden" name="scope" value="r_emailaddress" />
+            <input type="hidden" name="redirect_uri" value="/api-b/connect/linkedin" />
+            <div class="formInfo">
+                <p>You aren't connected to linkedin yet. Click the button to connect this application with your Linkedin account.</p>
+            </div>
+            <p><button type="submit">Connect to Linkedin</button></p>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Hello Facebook</title>
+        <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+		
+		<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+		<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+		
+		<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+		<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <h3>Connect to Facebook</h3>
+
+        <form action="/connect/facebook" method="POST">
+            <input type="hidden" name="scope" value="user_posts" />
+            <div class="formInfo">
+                <p>You aren't connected to Facebook yet. Click the button to connect this application with your Facebook account.</p>
+            </div>
+            <p><button type="submit">Connect to Facebook</button></p>
+            
+            <i aria-hidden="true" class="fa fa-twitter"></i>
+             <button type="submit" class="btn btn-primary"> 
+                Facebook <span class="fa fa-facebook"></span>
+             </button>
+        </form>
+    </body>
+</html>

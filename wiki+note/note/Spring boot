@@ -1,0 +1,75 @@
+【Spring boot】
+启动项目另外两种方式：
+1. mvn spring-boot:run
+	利用spring boot框架内置的tomcat运行spring boot开发的web应用
+2. java -jar demoXX.jar
+	java -jar XXX.jar --server.port=8080
+	java -jar XXX.jar --server.port=8080 --spring.profiles.active=prod
+
+/mwe
+java -jar service/mweServer/target/mweServer-0.0.1-SNAPSHOT.jar
+java -jar service/mweClient/target/mweClient-0.0.1-SNAPSHOT.jar
+java -jar service/mweServiceFeign/target/mweServiceFeign-0.0.1-SNAPSHOT.jar
+java -jar service/mweServiceRibbon/target/mweServiceRibbon-0.0.1-SNAPSHOT.jar
+java -jar service/mweServiceZuul/target/mweServiceZuul-0.0.1-SNAPSHOT.jar
+
+
+java -jar service/mweClient/target/mweClient-0.0.1-SNAPSHOT.jar
+java -jar target/mweServiceRibbon-0.0.1-SNAPSHOT.jar
+java -jar target/mweServiceFeign-0.0.1-SNAPSHOT.jar
+java -jar service/mweServiceZuul/target/mweServiceZuul-0.0.1-SNAPSHOT.jar
+
+
+
+注意:
+ @GetMapping("/a/{id}")
+    public String speak(@PathVariable("id") Integer id) {
+        return String.valueOf(id);
+    }
+
+  不是@PathParam
+
+【mysql】
+原来Linux下的MySQL默认是区分表名大小写的，通过如下设置，可以让MySQL不区分表名大小写：
+
+mysqldump -u root -p 1234>a.sql;
+http://localhost:8080/validAddGirl?cupSize=F&age=122
+
+【search】
+搜索引擎选择： Elasticsearch与Solr
+https://www.cnblogs.com/chowmin/articles/4629220.html
+
+【java】
+java.date.util 比较日期date.before(); after();
+
+【maven】
+【maven、ant、gradle】管理和构建项目
+没有使用maven前，需要在各大官网上下载项目所需要的jar包，引入到自己的项目中,可能会有冲突，需要的不需要的，增加了对项目管理的难度
+基于项目对象模型（POM），可以通过一小段描述信息来管理项目的构建。
+maven.apache.org
+* maven 目录结构：bin；boot；conf...
+maven 项目目录结构：
+src
+   -main
+	-java
+	     -package
+   -test
+	-java
+	     -package
+   -source
+pom.xml
+-----------------------
+maven 常用构建命令
+mvn compile 编译源项目 编译的过程中，用到其他包首先pom.xml，中仓库中有会加入本项目的classpath中，没有去远程maven仓库中查找下载并且放到本地仓库
+mvn test 生成的测试报告 
+		生成了tartget目录
+			-class
+			-surefire-repports生成的测试报告
+			-...
+mvn package 打包项目
+mvn clean  删除target目录
+mvn install 把jar文件发布到本地仓库中
+
+mvn archetype:generate 自动创建maven项目的骨架
+
+

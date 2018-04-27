@@ -1,0 +1,18 @@
+tar -xvf apache-maven-3.3.9-bin.tar.gz 
+
+mv apache-maven-3.3.9 /usr/local/apache-maven
+
+export JAVA_HOME=/usr/local/jdk1.8
+export MAVEN_HOME=/usr/local/apache-maven
+export PATH=$JAVA_HOME/bin:$JAVA_HOME/jre/bin:$MAVEN_HOME/bin:$PATH
+
+
+
+
+http://192.168.22.66:8080/
+rq#my>HuD9kr
+
+http://www.jb51.net/article/48625.htm
+http://blog.csdn.net/cryhelyxx/article/details/49757217
+
+http://www.bubuko.com/infodetail-2164257.html
